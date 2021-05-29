@@ -1,0 +1,286 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta content="width=device-width, initial-scale=1" name="viewport" />
+        <meta name="description" content="Sabancı University - Spring 2021 term countdown for freshman students.">
+        <meta name="author" content="Huseyin Alper Karadeniz">
+        <title>SU Freshman Countdown Spring 2021</title>
+        <link rel="icon" type="image/png" href="favicon.png"/>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;600;700;800&display=swap" rel="stylesheet">
+        <style>
+            * {
+                margin: 0;
+                transition: 0.4s ease-in;
+            }
+            hmtl, body {
+                font-family: 'Open Sans', sans-serif;
+                color: #000000;
+                text-align: center;
+            }
+            body {
+                background: linear-gradient(-45deg, #ff35b7, #33d2fc, #2efa87);
+                background-size: 400% 400%;
+                animation: gradient 60s ease infinite;
+            }
+            @keyframes gradient {
+                0% {
+                    background-position: 0% 50%;
+                }
+                50% {
+                    background-position: 100% 50%;
+                }
+                100% {
+                    background-position: 0% 50%;
+                }
+            }
+            
+            #main {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding: 5rem 2rem 0 2rem;
+            }
+            #main-title {
+                font-weight: 800;
+                color: #004E9A;
+                letter-spacing: 0.5;
+                font-size: 27px;
+                margin-top: 2rem;
+            }
+            #timer-main {
+                font-size: 80px;
+                color: #FFFFFF;
+                font-weight: 800;
+                margin: 128px 0 108px 0;
+            }
+            #exam-schedule {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding: 0 2rem 2rem 2rem;
+            }
+            #exam-schedule-title {
+                padding: 3rem 1rem;
+                color: #FFFFFF;
+                font-weight: 700;
+                font-size: 24px;
+            }
+            .exam {
+                align-items: center;
+                display: flex;
+                flex-direction: column;
+                padding: 1rem;
+            }
+            .exam-name {
+                font-weight: 700;
+                font-size: 24px;
+                color: #004E9A;
+            }
+            .exam-timer{
+                font-weight: 700;
+                font-size: 18px;
+                color: #FFFFFF;
+                padding-top: 0.25rem;
+            }
+            footer {
+                text-align: center;
+                margin: 3rem 2rem 2.5rem 2rem;
+                color: #FFFFFF;
+                font-weight: 600;
+                opacity: 0.75;
+            }
+            .no-selection {
+                user-select: none;
+                -ms-user-select: none;
+                -moz-user-select: none;
+                -khtml-user-select: none;
+                -webkit-user-select: none;
+                -webkit-touch-callout: none;
+            }
+            @media screen and (max-width: 896px) {
+                #main-title {
+                    font-size: 23px;
+                }
+                #timer-main {
+                    font-size: 60px;
+                }
+                #exam-schedule-title {
+                    font-size: 23px;
+                }
+            }
+            @media screen and (max-width: 675px) {
+                #main-title {
+                    font-size: 22px;
+                }
+                #timer-main {
+                    font-size: 54px;
+                    margin: 92px 0 72px 0;
+                }
+                #exam-schedule-title {
+                    font-size: 22px;
+                }
+            }
+            @media screen and (max-width: 592px) {
+                #main-title {
+                    font-size: 20px;
+                }
+                #timer-main {
+                    font-size: 48px;
+                    margin: 84px 0 64px 0;
+                }
+                #exam-schedule-title {
+                    font-size: 20px;
+                }
+            }
+            @media screen and (max-width: 540px) {
+                #main-title {
+                    font-size: 18px;
+                }
+                #timer-main {
+                    font-size: 36px;
+                    margin: 80px 0 60px 0;
+                }
+                #exam-schedule-title {
+                    font-size: 18px;
+                }
+            }
+            @media screen and (max-width: 480px) {
+                #main{
+                    padding: 3rem 2rem 0 2rem;
+                }
+                #main-title {
+                    font-size: 18px;
+                }
+                #timer-main {
+                    font-size: 36px;
+                }
+                #exam-schedule-title {
+                    font-size: 18px;
+                }
+            }
+            @media screen and (max-width: 420px) {
+                #main{
+                    padding: 3rem 2rem 0 2rem;
+                }
+                #main-title {
+                    font-size: 26px;
+                }
+                #timer-main {
+                    font-size: 32px;
+                }
+                #exam-schedule-title {
+                    font-size: 17px;
+                }
+            }
+        </style>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-ELEG482S8S"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-ELEG482S8S');
+        </script>
+    </head>
+    
+    <body>
+        <div id="main">
+            <a id="main-title">COUNTDOWN TO GRAND FINAL</a>
+            <p id="timer-main">-- -- -- --</p>
+        </div>
+        <div id="exam-schedule">
+            
+            <a id="exam-schedule-title">• COUNTDOWN EXAM BY EXAM •</a>
+            <div class="exam">
+                <a id="exam-name-1" class="exam-name">SPS102</a>
+                <p id="timer-1" class="exam-timer">-- -- -- --</p>
+            </div>
+        
+            <div class="exam">
+                <a id="exam-name-2" class="exam-name">TLL 102</a>
+                <p id="timer-2" class="exam-timer">-- -- -- --</p>
+            </div>
+        
+            <div class="exam">
+                <a id="exam-name-3" class="exam-name">HIST 192</a>
+                <p id="timer-3" class="exam-timer">-- -- -- --</p>
+            </div>
+        
+            <div class="exam">
+                <a id="exam-name-4" class="exam-name">AL 102</a>
+                <p id="timer-4" class="exam-timer">-- -- -- --</p>
+            </div>
+        
+            <div class="exam">
+                <a id="exam-name-5" class="exam-name">MATH 102</a>
+                <p id="timer-5" class="exam-timer">-- -- -- --</p>
+            </div>
+        
+            <div class="exam">
+                <a id="exam-name-6" class="exam-name">CS 201</a>
+                <p id="timer-6" class="exam-timer">-- -- -- --</p>
+            </div>
+        
+            <div class="exam">
+                <a id="exam-name-7" class="exam-name">NS 102</a>
+                <p id="timer-7" class="exam-timer">-- -- -- --</p>
+            </div>
+            
+        </div>
+        
+        <footer>
+            <a id="credit" class="no-selection">Huseyin Alper Karadeniz</a>
+        </footer>
+        <script>
+            
+            var timeSPS102 = new Date("May 29, 2021 12:00:00").getTime();
+            var timeTLL102 = new Date("May 30, 2021 19:30:00").getTime();
+            var timeHIST192 = new Date("May 31, 2021 15:30:00").getTime();
+            var timeAL102 = new Date("May 31, 2021 17:30:00").getTime();
+            var timeMATH102 = new Date("Jun 2, 2021 12:00:00").getTime();
+            var timeCS201 = new Date("Jun 2, 2021 19:00:00").getTime();
+            var timeNS102 = new Date("Jun 4, 2021 12:00:00").getTime();
+            
+            var timeFinal = new Date("Jun 4, 2021 12:00:00").getTime();
+            
+            function howMuchTimeLeft(final_time, now_time, timer_no, exam_no, exam_name) {
+                var timeLeft = final_time - now_time;
+                var daysLeft = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+                var hoursLeft = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                var minutesLeft = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+                var secondsLeft = Math.floor((timeLeft % (1000 * 60)) / 1000);
+                
+                if (timer_no != "timer-main") {
+                    document.getElementById(exam_no).innerHTML = exam_name;
+                    document.getElementById(timer_no).innerHTML = daysLeft + "D " + hoursLeft + "H " + minutesLeft + "M " + secondsLeft + "S ";
+                    if (timeLeft < 0){
+                        document.getElementById(timer_no).innerHTML = "✓ - YOU SURVIVED IN " + exam_name + "!";
+                        document.getElementById(exam_no).style.textDecoration = "line-through";
+                        document.getElementById(timer_no).style.opacity = "0.5";
+                        document.getElementById(exam_no).style.opacity = "0.5";
+                    }
+                } else {
+                    document.getElementById(timer_no).innerHTML = daysLeft + "D " + hoursLeft + "H " + minutesLeft + "M " + secondsLeft + "S ";
+                    if (timeLeft < 0){
+                        document.getElementById(timer_no).innerHTML = "CONGRATULATIONS! THE TERM IS OVER!";
+                    }       
+                }
+            }
+
+            var x = setInterval(function() {
+                var timeNow = new Date().getTime();
+                howMuchTimeLeft(timeFinal, timeNow, "timer-main", "exam-name-0", "final");
+                howMuchTimeLeft(timeSPS102, timeNow, "timer-1", "exam-name-1", "SPS 102");
+                howMuchTimeLeft(timeTLL102, timeNow, "timer-2", "exam-name-2", "TLL 102");
+                howMuchTimeLeft(timeHIST192, timeNow, "timer-3", "exam-name-3", "HIST 192");
+                howMuchTimeLeft(timeAL102, timeNow, "timer-4", "exam-name-4", "AL 102");
+                howMuchTimeLeft(timeMATH102, timeNow, "timer-5", "exam-name-5", "MATH 102");
+                howMuchTimeLeft(timeCS201, timeNow, "timer-6", "exam-name-6", "CS 201");
+                howMuchTimeLeft(timeNS102, timeNow, "timer-7", "exam-name-7", "NS 102");
+                
+                
+            }, 1000);
+        </script>
+    </body>
+    
+</html>
