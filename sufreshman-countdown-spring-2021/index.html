@@ -238,7 +238,7 @@
             var timeTLL102 = new Date("May 30, 2021 19:30:00").getTime();
             var timeAL102 = new Date("May 31, 2021 05:30:00").getTime();
             var timeHIST192 = new Date("May 31, 2021 15:30:00").getTime();
-            var timeMATH102 = new Date("Jun 2, 2021 12:00:00").getTime();
+            var timeMATH102 = new Date("Jun 2, 2021 11:20:00").getTime();
             var timeCS201 = new Date("Jun 2, 2021 19:00:00").getTime();
             var timeNS102 = new Date("Jun 4, 2021 12:00:00").getTime();
             
@@ -263,7 +263,7 @@
                 } else {
                     document.getElementById(timer_no).innerHTML = daysLeft + "D " + hoursLeft + "H " + minutesLeft + "M " + secondsLeft + "S ";
                     if (timeLeft < 0){
-                        document.getElementById(timer_no).innerHTML = "CONGRATULATIONS! THE TERM IS OVER!";
+                        document.getElementById(timer_no).innerHTML = "THE TERM IS OVER!";
                     }       
                 }
             }
@@ -273,13 +273,11 @@
                 howMuchTimeLeft(timeFinal, timeNow, "timer-main", "exam-name-0", "final");
                 howMuchTimeLeft(timeSPS102, timeNow, "timer-1", "exam-name-1", "SPS 102");
                 howMuchTimeLeft(timeTLL102, timeNow, "timer-2", "exam-name-2", "TLL 102");
-                howMuchTimeLeft(timeAL102, timeNow, "timer-3", "exam-name-3", "AL 102*");
+                howMuchTimeLeft(timeAL102, timeNow, "timer-3", "exam-name-3", "AL 102");
                 howMuchTimeLeft(timeHIST192, timeNow, "timer-4", "exam-name-4", "HIST 192");
                 howMuchTimeLeft(timeMATH102, timeNow, "timer-5", "exam-name-5", "MATH 102");
                 howMuchTimeLeft(timeCS201, timeNow, "timer-6", "exam-name-6", "CS 201");
                 howMuchTimeLeft(timeNS102, timeNow, "timer-7", "exam-name-7", "NS 102");
-                
-                
             }, 1000);
         </script>
     </body>
